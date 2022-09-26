@@ -1,0 +1,11 @@
+{% extends 'footer.html' %}
+
+{% block content %}
+    <div class="blog-post">
+        <h2 class="blog-post-title">
+            {{ post.titulo }}
+        </h2>
+        <p class="blog-post-meta">{{ post.data_criacao|date:'d, M Y' }} by <a href="#">{{ post.autor.get_full_name}}</a></p>
+        {{ post.content|safe }} 
+    </div><!-- /.blog-post -->         
+{% endblock %}
