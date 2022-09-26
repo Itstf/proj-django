@@ -10,4 +10,5 @@ urlpatterns = [
     path('',views.home),
     path('posts/<int:post_id>',views.post),
     path('manchetes/<int:manchete_id>',views.manchete),
+    path('welcomes/<int:welcome_id>',views.welcome),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

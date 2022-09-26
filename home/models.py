@@ -3,7 +3,6 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
-# Create your models here.
 class Post(models.Model):
     titulo = models.CharField(max_length=255)
     sumario = RichTextField()
@@ -20,3 +19,10 @@ class Manchete(models.Model):
     
     def __str__(self):
         return self.titulo_destaque
+
+class Welcome(models.Model):
+    texto_inicial = models.CharField(max_length=40)
+    subtexto = models.CharField(max_length=45)
+    
+    def __str__(self):
+        return self.texto_inicial
